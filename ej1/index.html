@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica Videojuego | Motor Web | Alvaro Rincon</title>
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+    <script src="js/app.js"></script>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <img src="textures/fondo.jpg" id="sky">
+            <a-asset-item id="spear" src="objects/spear/scene.gltf"></a-asset-item>
+            <a-asset-item id="paperbag" src="objects/burger_king_paper_bag/scene.gltf"></a-asset-item>
+        </a-assets>
+
+
+        <a-sky src="#sky"></a-sky>
+
+        <a-entity class="orbit" position="0 4 0" rotation="0 0 0"
+            animation="property: rotation; to: 0 360 360; loop: true; dur:50000; easing: linear">
+        </a-entity>
+        <a-entity class="orbit" position="0 2 0" rotation="89 0 -45"
+            animation="property: rotation; to: 0 -360 0; loop: true; dur:40000; easing: linear">
+        </a-entity>
+        <a-entity class="orbit" position="0 -5 0" rotation="150 0 -90"
+            animation="property: rotation; to: 0 360 -360; loop: true; dur:45000; easing: linear">
+        </a-entity>
+        <a-entity class="orbit" position="0 -1 0" rotation="50 0 -120"
+            animation="property: rotation; to: 360 -360 0; loop: true; dur:50000; easing: linear">
+        </a-entity>
+
+        <a-text value="Recoge las bolsas por favor" color="red" position="0 0.75 -1" width="1.5" align="center"></a-text>
+
+        <a-entity camera look-controls>
+
+            <a-entity gltf-model="#spear" position=".8 .25 -2.5" scale=".5 .5 .5" rotation="1 0 -45"></a-entity>
+
+            <a-entity cursor="fuse: true; fuseTimeout: 300" position="0 0 -1" raycaster="objects: .paperbag"
+                geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.015" material="shader: flat"></a-entity>
+
+        </a-entity>
+    </a-scene>
+</body>
+
+</html>
