@@ -1,8 +1,0 @@
-Model Information:
-* title:	Spear
-* source:	https://sketchfab.com/3d-models/spear-fbd46b82fe2c4ea4acb72f73c2eb720b
-* author:	plazma019 (https://sketchfab.com/plazma019)
-
-Model License:
-* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
-* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works
